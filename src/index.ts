@@ -19,3 +19,10 @@ number[0] = 1;
 let users: [number, string] = [20, "Anik"]; 
 // or
 let person: [number, string, boolean, number] = [20, 'Reza', true, 4];
+
+
+// Enum
+// if we use constant, js file will give the more optimized code.
+const enum Size { Small = 1, Medium, large };
+let mySize: Size = Size.Medium;
+console.log(mySize);
