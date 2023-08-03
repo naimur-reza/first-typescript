@@ -1,11 +1,3 @@
-let age: number = 50;
-let number: number[] = [];
-number[0] = 1;
-// number[1] = '2'; => this is can not assignable;
-
-// defining method
-let users: [number, string] = [20, "Anik"]; 
-
 
 /**
  * Built in types in Typescript:
@@ -16,3 +8,14 @@ let users: [number, string] = [20, "Anik"];
  * 5. Tuple
  */
 
+// Array defining method
+let age = [1, 1, 1, 'awkward'];
+// empty array
+let number: number[] = [];
+number[0] = 1;
+// number[1] = '2'; => this is can not assignable;
+
+// tuple defining method
+let users: [number, string] = [20, "Anik"]; 
+// or
+let person: [number, string, boolean, number] = [20, 'Reza', true, 4];
