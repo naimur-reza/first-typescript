@@ -1,11 +1,12 @@
 
 /**
  * Built in types in Typescript:
- * 1. Any
- * 2. Unknown
- * 3. Enum
- * 4. Never
+ * 1. Any (Allow anything)
+ * 2. Unknown (Ensure someone using this type declares what the type is)
+ * 3. Enum ()
+ * 4. Never (It's not possible that this type could happen)
  * 5. Tuple
+ * 6. Void (a function which returns undefined or has no return value)
  */
 
 // Array defining method
@@ -26,3 +27,56 @@ let person: [number, string, boolean, number] = [20, 'Reza', true, 4];
 const enum Size { Small = 1, Medium, large };
 let mySize: Size = Size.Medium;
 console.log(mySize);
+
+// function
+function Calculation(age: number) {
+    if(age > 20)
+    return age;
+}
+ 
+
+// interface creation
+interface User {
+    name: string;
+    id: number
+    
+}
+
+const user: User = {
+    name: "Anik",
+    id:9
+}
+
+type myBool = true | false;
+type WindowStates = "Locked" | "Unlocked";
+
+
+// object creation
+let employee: {
+    readonly id: number,
+    name: string,
+    // we can use return method by using retire
+    retire: (date: Date) => void
+} = {
+    id: 3,
+    name: 'Jacky',
+    retire: (date: Date) => 
+        console.log(date)
+}
+
+
+// literal type
+type Quantity = 20 | 10;
+let quantity: Quantity = 10;
+
+
+// nullable types with union operator
+function greet(name: string | null | undefined) {
+    if(name)
+        console.log(name.toLowerCase());
+    else
+        console.log('Not a valid string')
+
+}
+
+greet(undefined);
