@@ -36,4 +36,12 @@
     name: "Reza",
     age: 20,
   };
+
+  interface SumProps {
+    (num1: number, num2: number): number;
+  }
+
+  const makeSum: SumProps = (num1, num2) => {
+    return num1 + num2;
+  };
 }
