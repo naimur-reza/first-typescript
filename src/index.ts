@@ -49,6 +49,7 @@ const user: User = {
 
 type myBool = true | false;
 type WindowStates = "Locked" | "Unlocked";
+<<<<<<< HEAD
 
 
 // object creation
@@ -97,3 +98,5 @@ console.log(customer?.birthday)
 
 // optional element access operator
 // customers?.[0]
+=======
+>>>>>>> d854be3df66e8a860582393d04a505888beb4b90
