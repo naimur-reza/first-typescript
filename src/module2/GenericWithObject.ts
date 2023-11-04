@@ -1,4 +1,4 @@
-interface Developer<T> {
+interface Developer<T, U = null> {
   name: string;
   age: number;
   computer: {
@@ -7,6 +7,7 @@ interface Developer<T> {
   };
 
   monitorDetails: T;
+  car?: U;
 }
 
 interface MonitorDetails {
@@ -31,7 +32,13 @@ interface MonitorDetails2 {
   name: string;
   resolution: string;
 }
-const developer2: Developer<MonitorDetails2> = {
+
+interface Car {
+  name: string;
+  releaseDate: string;
+}
+
+const developer2: Developer<MonitorDetails2, Car> = {
   name: "Witch",
   age: 22,
   computer: {
@@ -41,5 +48,9 @@ const developer2: Developer<MonitorDetails2> = {
   monitorDetails: {
     name: "Apple",
     resolution: "8k",
+  },
+  car: {
+    name: "Audi",
+    releaseDate: "2002",
   },
 };
