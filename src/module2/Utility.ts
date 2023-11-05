@@ -13,4 +13,16 @@
   // omit utility type
 
   type Contact = Omit<Person, "age" | "name" | "maritalStatus">;
+
+  // required type
+
+  type ShouldProvide = Required<Person>;
+
+  // partial type
+
+  type OptionalProps = Partial<Person>;
+
+  // Readonly type
+
+  type NoUpdate = Readonly<Person>;
 }
